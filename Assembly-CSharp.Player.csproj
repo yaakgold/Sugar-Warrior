@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -47,11 +47,14 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.12</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.14</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.3.27f1</UnityVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Level.cs" />
@@ -72,6 +75,7 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <Compile Include="Assets\Scripts\Progression.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
@@ -350,9 +354,6 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.27f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -701,97 +702,97 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Purchasing.Common.csproj">
-      <Project>{90EA8233-4065-EE17-4D77-DBE3854FFD11}</Project>
-      <Name>Purchasing.Common</Name>
+    <ProjectReference Include="Purchasing.Common.Player.csproj">
+      <Project>{90FC00D3-9BAF-79F1-F0D1-468BEF95CFB7}</Project>
+      <Name>Purchasing.Common.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
-      <Project>{53D60271-DF81-B714-1F26-7A979B13747F}</Project>
-      <Name>Unity.RenderPipelines.Universal.Shaders</Name>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.Player.csproj">
+      <Project>{055BA039-8BA4-A30C-00B7-ACAF9FF79970}</Project>
+      <Name>Unity.RenderPipelines.Universal.Shaders.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.Purchasing.csproj">
-      <Project>{FEC3FDA0-3ACF-143B-F6F7-DD44F642E3D3}</Project>
-      <Name>UnityEngine.Purchasing</Name>
+    <ProjectReference Include="UnityEngine.Purchasing.Player.csproj">
+      <Project>{EB1E5C4A-3966-77EE-2A05-6EBCB6371FC5}</Project>
+      <Name>UnityEngine.Purchasing.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.Purchasing.SecurityStub.csproj">
-      <Project>{2D2CA58B-5AEB-BA3B-B2DD-1A0C3A3BB607}</Project>
-      <Name>UnityEngine.Purchasing.SecurityStub</Name>
+    <ProjectReference Include="UnityEngine.Purchasing.SecurityStub.Player.csproj">
+      <Project>{28350BA0-3750-3B2C-129E-825C6D1F1CD9}</Project>
+      <Name>UnityEngine.Purchasing.SecurityStub.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.Advertisements.csproj">
-      <Project>{B27B6107-D196-5232-4E87-58928F5FC57D}</Project>
-      <Name>UnityEngine.Advertisements</Name>
+    <ProjectReference Include="UnityEngine.Advertisements.Player.csproj">
+      <Project>{E3ED1A8B-A203-DD7F-57D9-C2B1C942A34D}</Project>
+      <Name>UnityEngine.Advertisements.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
-      <Project>{8D7921E8-954B-BEC4-A635-C2E222175C9C}</Project>
-      <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
+    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.Player.csproj">
+      <Project>{8F04E5A9-C429-EEC2-2910-283A35917B11}</Project>
+      <Name>Unity.RenderPipelines.Core.ShaderLibrary.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{91B31B7D-3E17-2215-39D8-3FB7B7C597DD}</Project>
-      <Name>UnityEngine.UI</Name>
+    <ProjectReference Include="UnityEngine.UI.Player.csproj">
+      <Project>{62613B9A-ECAA-F386-A2EB-21274AE76444}</Project>
+      <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.SpatialTracking.csproj">
-      <Project>{F341DA46-9615-B854-C6C5-C66D30B7CC1F}</Project>
-      <Name>UnityEngine.SpatialTracking</Name>
+    <ProjectReference Include="UnityEngine.SpatialTracking.Player.csproj">
+      <Project>{8C5B63C6-BEE6-B584-205F-6415D00E22BA}</Project>
+      <Name>UnityEngine.SpatialTracking.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Analytics.DataPrivacy.csproj">
-      <Project>{C0D4C5D0-9A3E-94C1-C9E5-6BE69FCB14AA}</Project>
-      <Name>Unity.Analytics.DataPrivacy</Name>
+    <ProjectReference Include="Unity.Analytics.DataPrivacy.Player.csproj">
+      <Project>{CD54C47D-AA1B-85E7-220C-01848C216081}</Project>
+      <Name>Unity.Analytics.DataPrivacy.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Cinemachine.csproj">
-      <Project>{A10DCFDB-08BB-23D4-3C63-9A2BE540BFBC}</Project>
-      <Name>Cinemachine</Name>
+    <ProjectReference Include="Cinemachine.Player.csproj">
+      <Project>{FEA076C6-6951-BAD3-6F14-E7CCBCEEB9CF}</Project>
+      <Name>Cinemachine.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.Purchasing.Codeless.csproj">
-      <Project>{BB97DCF1-27D1-7092-94E3-90D228F04F1A}</Project>
-      <Name>UnityEngine.Purchasing.Codeless</Name>
+    <ProjectReference Include="UnityEngine.Purchasing.Codeless.Player.csproj">
+      <Project>{6D5A2034-6776-5FA4-0898-2B6BE3052DAB}</Project>
+      <Name>UnityEngine.Purchasing.Codeless.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
-      <Project>{D46312C4-0DDE-E471-6523-F559D4885DCA}</Project>
-      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
+    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.Player.csproj">
+      <Project>{F95E4997-7F98-93E4-B2F7-869EC3B7280D}</Project>
+      <Name>Unity.RenderPipeline.Universal.ShaderLibrary.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.Monetization.csproj">
-      <Project>{3E70C0D7-1FA5-D0F2-FC16-9678556CCBBF}</Project>
-      <Name>UnityEngine.Monetization</Name>
+    <ProjectReference Include="UnityEngine.Monetization.Player.csproj">
+      <Project>{1B83A146-6BC7-E0A1-6E4F-869E6C130ABA}</Project>
+      <Name>UnityEngine.Monetization.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
-      <Project>{CC414E9C-7599-23EE-EB9B-080938B66319}</Project>
-      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.Player.csproj">
+      <Project>{5014B64A-83DD-54DB-32D5-6D4F99157A62}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{8B586605-10A1-3CD0-F5AC-6B0973CB5E8C}</Project>
-      <Name>Unity.Timeline</Name>
+    <ProjectReference Include="Unity.Timeline.Player.csproj">
+      <Project>{60385D35-11C7-2D98-3418-1E36B84DB52E}</Project>
+      <Name>Unity.Timeline.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{3A9CAD96-BE4B-6084-D406-2E56AF50F880}</Project>
-      <Name>Unity.TextMeshPro</Name>
+    <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
+      <Project>{04066BD2-D5AF-53D3-48EF-0A2590507E94}</Project>
+      <Name>Unity.TextMeshPro.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{49F78F4E-C0C0-3D57-3A0B-ED5AF2461ACE}</Project>
-      <Name>Unity.RenderPipelines.Core.Runtime</Name>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Player.csproj">
+      <Project>{A7D39D6A-BACA-77A2-D67C-685AC10C55AF}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{65AE1CF5-120A-5E76-C7B0-4A588A3FD4C6}</Project>
-      <Name>Unity.Mathematics</Name>
+    <ProjectReference Include="Unity.Mathematics.Player.csproj">
+      <Project>{FB0AB3A0-BB78-78B1-6F5E-467F47A1BF32}</Project>
+      <Name>Unity.Mathematics.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.Purchasing.SecurityCore.csproj">
-      <Project>{D4B49B18-D597-8555-6BB0-746C1EB6B9B9}</Project>
-      <Name>UnityEngine.Purchasing.SecurityCore</Name>
+    <ProjectReference Include="UnityEngine.Purchasing.SecurityCore.Player.csproj">
+      <Project>{AB85BF18-CF1B-AE93-BC32-4A34D732E18E}</Project>
+      <Name>UnityEngine.Purchasing.SecurityCore.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
-      <Project>{048E940D-98E1-A0CD-2526-528688488785}</Project>
-      <Name>Unity.Postprocessing.Runtime</Name>
+    <ProjectReference Include="Unity.Postprocessing.Runtime.Player.csproj">
+      <Project>{FFB82257-D86E-34BC-3AB3-D3E200D57D3D}</Project>
+      <Name>Unity.Postprocessing.Runtime.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.XR.LegacyInputHelpers.csproj">
-      <Project>{5E67A015-35F7-8473-2A75-0D33E76F2133}</Project>
-      <Name>UnityEngine.XR.LegacyInputHelpers</Name>
+    <ProjectReference Include="UnityEngine.XR.LegacyInputHelpers.Player.csproj">
+      <Project>{00F3EF96-BBB0-B2EE-3353-52C6BB50E38B}</Project>
+      <Name>UnityEngine.XR.LegacyInputHelpers.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
-      <Project>{78FCEE82-7224-048E-9283-47C932882B17}</Project>
-      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
+      <Project>{9948328C-ECEA-EFAC-E449-A6AE5B87F5FE}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.Purchasing.Stores.csproj">
-      <Project>{CD4FA87E-EAFA-56B5-21E5-BD1581ACC116}</Project>
-      <Name>UnityEngine.Purchasing.Stores</Name>
+    <ProjectReference Include="UnityEngine.Purchasing.Stores.Player.csproj">
+      <Project>{2282A9B3-D39D-CA72-B103-63173390DE7E}</Project>
+      <Name>UnityEngine.Purchasing.Stores.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

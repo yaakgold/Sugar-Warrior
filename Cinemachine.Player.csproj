@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -47,11 +47,14 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.12</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.14</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.3.27f1</UnityVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Core\CinemachineDebug.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Core\UnityVectorExtensions.cs" />
@@ -65,7 +68,9 @@
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Behaviours\CinemachineVirtualCamera.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Behaviours\CinemachinePipeline.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Components\CinemachineHardLookAt.cs" />
+    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Helpers\CinemachineInputProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Timeline\CinemachineTrack.cs" />
+    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Components\Cinemachine3rdPersonFollow.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Core\SignalSourceAsset.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Behaviours\CinemachineMixingCamera.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Core\AxisState.cs" />
@@ -76,9 +81,13 @@
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Components\CinemachineFramingTransposer.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Timeline\CinemachineMixer.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Core\Predictor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Core\TargetPositionCache.cs" />
+    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Impulse\CinemachineIndependentImpulseListener.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Components\CinemachineGroupComposer.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Helpers\CinemachineTouchInputMapper.cs" />
+    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Behaviours\Cinemachine3rdPersonAim.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Components\CinemachineHardLockToTarget.cs" />
+    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Helpers\GroupWeightManipulator.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Behaviours\CinemachineTargetGroup.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Impulse\CinemachineCollisionImpulseSource.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Core\UpdateTracker.cs" />
@@ -119,17 +128,11 @@
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Behaviours\CinemachineStateDrivenCamera.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Core\SplineHelpers.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Impulse\CinemachineImpulseDefinition.cs" />
+    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Behaviours\CinemachineRecomposer.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Components\CinemachineBasicMultiChannelPerlin.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Core\CinemachineInputAxisDriver.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Behaviours\CinemachineFollowZoom.cs" />
     <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Core\CinemachineCore.cs" />
-    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Helpers\CinemachineInputProvider.cs" />
-    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Behaviours\CinemachineRecomposer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Core\TargetPositionCache.cs" />
-    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Behaviours\Cinemachine3rdPersonAim.cs" />
-    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Components\Cinemachine3rdPersonFollow.cs" />
-    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Impulse\CinemachineIndependentImpulseListener.cs" />
-    <Compile Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\Helpers\GroupWeightManipulator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.cinemachine@2.6.11\Runtime\com.unity.cinemachine.asmdef" />
@@ -332,9 +335,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.27f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -683,25 +683,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{8B586605-10A1-3CD0-F5AC-6B0973CB5E8C}</Project>
-      <Name>Unity.Timeline</Name>
+    <ProjectReference Include="Unity.Timeline.Player.csproj">
+      <Project>{60385D35-11C7-2D98-3418-1E36B84DB52E}</Project>
+      <Name>Unity.Timeline.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
-      <Project>{048E940D-98E1-A0CD-2526-528688488785}</Project>
-      <Name>Unity.Postprocessing.Runtime</Name>
+    <ProjectReference Include="Unity.Postprocessing.Runtime.Player.csproj">
+      <Project>{FFB82257-D86E-34BC-3AB3-D3E200D57D3D}</Project>
+      <Name>Unity.Postprocessing.Runtime.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{49F78F4E-C0C0-3D57-3A0B-ED5AF2461ACE}</Project>
-      <Name>Unity.RenderPipelines.Core.Runtime</Name>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Player.csproj">
+      <Project>{A7D39D6A-BACA-77A2-D67C-685AC10C55AF}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
-      <Project>{CC414E9C-7599-23EE-EB9B-080938B66319}</Project>
-      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.Player.csproj">
+      <Project>{5014B64A-83DD-54DB-32D5-6D4F99157A62}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{91B31B7D-3E17-2215-39D8-3FB7B7C597DD}</Project>
-      <Name>UnityEngine.UI</Name>
+    <ProjectReference Include="UnityEngine.UI.Player.csproj">
+      <Project>{62613B9A-ECAA-F386-A2EB-21274AE76444}</Project>
+      <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -91,6 +91,7 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\Analytics\Entity\EventTools.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\ServiceProjectSettings\UI\Views\IapCatalogServiceSettingsBlock.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\ServiceProjectSettings\Presenter\BasePurchasingState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\Analytics\Entity\GameServices\GameServicesEventComponents.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\ServiceProjectSettings\Entity\GoogleConfigurationData.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\Analytics\Events\GenericEditorSelectDropdownEvent.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\Analytics\Helpers\GenericEditorClickCheckboxEventSenderHelpers.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\Analytics\PurchasingServiceAnalyticsSender.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\ServiceProjectSettings\UI\Views\PlatformsAndStoresEnabledServiceSettingsBlock.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\Obfuscation\Entity\TangleFileConsts.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\Analytics\Entity\GameServices\GameServicesEventActions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\ServiceProjectSettings\Entity\Consts\SettingsUIConstants.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\ServiceProjectSettings\UI\Views\Obfuscator\AppleObfuscatorSection.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\IAPButtonEditor.cs" />
@@ -118,6 +120,7 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\Analytics\Entity\EventComponents.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\Obfuscation\Service\ObfuscationMigration.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\Analytics\PackageKey\IAnalyticsPackageKeyHolder.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\Analytics\Helpers\GameServices\GameServicesEventSenderHelpers.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\ServiceProjectSettings\PurchasingServiceIdentifier.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\Analytics\Signatures\SignatureDefinitions.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\AppleXMLProductCatalogExporter.cs" />
@@ -146,9 +149,6 @@
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\Analytics\Helpers\GenericEditorMenuItemClickEventSenderHelpers.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\Analytics\PurchasingServiceAnalyticsRegistrar.cs" />
     <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\MenuItems\IapButtonMenu.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\Analytics\Helpers\GameServices\GameServicesEventSenderHelpers.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\Analytics\Entity\GameServices\GameServicesEventComponents.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\Analytics\Entity\GameServices\GameServicesEventActions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.purchasing@4.1.3\Editor\ServiceProjectSettings\UI\StyleSheets\ServicesProjectSettingsDark.uss" />

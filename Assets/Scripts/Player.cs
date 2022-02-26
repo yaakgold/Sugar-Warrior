@@ -6,7 +6,7 @@ public class Player : Entity {
 
 	public override void Die()
 	{
-		GameManager.instance.PlayerDied();
+		GameManager.Instance.PlayerDied();
 		base.Die();
 	}
 

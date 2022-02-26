@@ -13,7 +13,9 @@ public class EnemySpawner : MonoBehaviour {
 	private float nextSpawnTime = 1f;
 
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+		if (GameManager.Instance.isPaused) return;
 
 		if (Progression.IsGrowing)
 			return;

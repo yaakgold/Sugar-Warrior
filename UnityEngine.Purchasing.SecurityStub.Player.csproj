@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -47,20 +47,23 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.12</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.14</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.3.27f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.2\Runtime\SecurityStub\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.2\Runtime\SecurityStub\CrossPlatformValidator.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.2\Runtime\SecurityStub\Obfuscator.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.2\Runtime\SecurityStub\AppleValidator.cs" />
-    <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.2\Runtime\SecurityStub\GooglePlayReceipt.cs" />
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.purchasing@4.1.2\Runtime\SecurityStub\UnityEngine.Purchasing.SecurityStub.asmdef" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Runtime\SecurityStub\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Runtime\SecurityStub\CrossPlatformValidator.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Runtime\SecurityStub\Obfuscator.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Runtime\SecurityStub\AppleValidator.cs" />
+    <Compile Include="Library\PackageCache\com.unity.purchasing@4.1.3\Runtime\SecurityStub\GooglePlayReceipt.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Library\PackageCache\com.unity.purchasing@4.1.3\Runtime\SecurityStub\UnityEngine.Purchasing.SecurityStub.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -260,9 +263,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.27f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -611,13 +611,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UnityEngine.Purchasing.SecurityCore.csproj">
-      <Project>{D4B49B18-D597-8555-6BB0-746C1EB6B9B9}</Project>
-      <Name>UnityEngine.Purchasing.SecurityCore</Name>
+    <ProjectReference Include="UnityEngine.Purchasing.SecurityCore.Player.csproj">
+      <Project>{AB85BF18-CF1B-AE93-BC32-4A34D732E18E}</Project>
+      <Name>UnityEngine.Purchasing.SecurityCore.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{91B31B7D-3E17-2215-39D8-3FB7B7C597DD}</Project>
-      <Name>UnityEngine.UI</Name>
+    <ProjectReference Include="UnityEngine.UI.Player.csproj">
+      <Project>{62613B9A-ECAA-F386-A2EB-21274AE76444}</Project>
+      <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
