@@ -138,6 +138,7 @@ public class Progression : MonoBehaviour {
 		if(!player)
         {
 			player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+			playerShooting = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerShooting>();
         }
 
 		player.health += reward.healthBonus;

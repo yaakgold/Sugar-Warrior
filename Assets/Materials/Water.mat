@@ -5,7 +5,8 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Water
   m_Shader: {fileID: 4800000, guid: b92cb817adf5540dba1556d8544bcbf4, type: 3}
   m_ShaderKeywords: BOOLEAN_19770C8E_ON ETC1_EXTERNAL_ALPHA
@@ -23,6 +24,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_AD8DEE7D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_C514FAC2:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -70,8 +75,21 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - Boolean_19770C8E: 1
+    - Vector1_A9B097C0: 0.01
     - Vector1_E66BDDDE: 1.28
     - Vector1_EE3455DA: 0.03
     - _AlphaClip: 0
@@ -96,10 +114,14 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_1CEA716E: {r: 0.33927286, g: 0.754717, b: 0.2171591, a: 0}
+    - Color_413159AF: {r: 0, g: 0, b: 0, a: 0}
     - Color_8288D963: {r: 0.23843674, g: 0.6037736, b: 0.11107157, a: 0}
+    - Color_96E4C3FE: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0}
     - Color_A5B6BEDB: {r: 0.5265958, g: 0.6226415, b: 0, a: 0}
     - Color_DE9C307C: {r: 1, g: 0, b: 0, a: 0}
+    - Color_F32598A9: {r: 0, g: 0.0724349, b: 1, a: 0}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _PlayerPos: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  m_BuildTextureStacks: []
