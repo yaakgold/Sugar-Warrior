@@ -135,6 +135,11 @@ public class Progression : MonoBehaviour {
 	{
 		Debug.Log("LEVEL UP!");
 
+		if(!player)
+        {
+			player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        }
+
 		player.health += reward.healthBonus;
 		playerShooting.currentWeapon = reward.weapon;
 
