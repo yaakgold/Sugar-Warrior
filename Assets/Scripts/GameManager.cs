@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
 	public static GameManager Instance;
 
 	public GameObject pauseMenu;
+	public GameObject deathScreen;
 
 	public bool isPaused = false;
 	public GameObject[] shipsObjs;
@@ -36,6 +37,9 @@ public class GameManager : MonoBehaviour {
 
 		pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
 		if(pauseMenu) pauseMenu.SetActive(false);
+
+		deathScreen = GameObject.FindGameObjectWithTag("DeathScreen");
+		if(deathScreen) deathScreen.SetActive(false);
     }
 
 	public void TogglePause()
@@ -65,7 +69,8 @@ public class GameManager : MonoBehaviour {
 
 		yield return new WaitForSecondsRealtime(2f);
 
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		GameObject.FindGameObjectWithTag("Canvas")?.GetComponent<GameMenus>().OnPlayerDie();
+		deathScreen.SetActive(true);
 	}
 
 }

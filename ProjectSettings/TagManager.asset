@@ -8,6 +8,8 @@ TagManager:
   - Bullet
   - VirtualCam
   - PauseMenu
+  - DeathScreen
+  - Canvas
   layers:
   - Default
   - TransparentFX
