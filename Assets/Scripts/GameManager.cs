@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour {
 
 	public static GameManager Instance;
 
+	public GameObject pauseMenu;
+
 	public bool isPaused = false;
 	public GameObject[] shipsObjs;
 	public int shipIndex = 0;
@@ -31,7 +33,25 @@ public class GameManager : MonoBehaviour {
 		var player = Instantiate(shipsObjs[shipIndex]);
 
 		GameObject.FindGameObjectWithTag("VirtualCam").GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = player.transform;
+
+		pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+		if(pauseMenu) pauseMenu.SetActive(false);
     }
+
+	public void TogglePause()
+    {
+		isPaused = !isPaused;
+		pauseMenu.SetActive(isPaused);
+
+		if(isPaused)
+        {
+			Time.timeScale = 0;
+        }
+		else
+        {
+			Time.timeScale = 1;
+        }
+	}
 
     public void PlayerDied ()
 	{
