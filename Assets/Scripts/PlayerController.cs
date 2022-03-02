@@ -21,9 +21,10 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
+	void Update()
+	{
 		movement.x = Input.GetAxisRaw("Horizontal");
 		movement.y = Input.GetAxisRaw("Vertical");
 
@@ -31,6 +32,11 @@ public class PlayerController : MonoBehaviour {
 
 		transform.localScale = Vector3.one * Progression.Growth;
 		moveSpeed = startMoveSpeed * Progression.Growth;
+
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			GameManager.Instance.TogglePause();
+		}
 	}
 
 	private void FixedUpdate()
