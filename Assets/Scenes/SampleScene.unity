@@ -530,9 +530,9 @@ MonoBehaviour:
       - enemyPrefab: {fileID: 1439578935461678, guid: d28dbd43105d9224d97be2e238817fff,
           type: 3}
         spawnChance: 1
-      - enemyPrefab: {fileID: 1699672455739750, guid: 115db2276a5ab1c449b31b7c50c9c591,
+      - enemyPrefab: {fileID: 2668794392184123223, guid: 4f94ea7634688044fb543025351155d1,
           type: 3}
-        spawnChance: 0.3
+        spawnChance: 0.5
     reward:
       weapon: {fileID: 11400000, guid: ebf1a0543e74152459ad365dfe7f7858, type: 2}
       healthBonus: 10
@@ -547,7 +547,7 @@ MonoBehaviour:
         spawnChance: 1
       - enemyPrefab: {fileID: 1699672455739750, guid: 115db2276a5ab1c449b31b7c50c9c591,
           type: 3}
-        spawnChance: 0.3
+        spawnChance: 0.5
       - enemyPrefab: {fileID: 1699672455739750, guid: c65641542e94a844abd4e4fa60a165f7,
           type: 3}
         spawnChance: 0.4
@@ -608,6 +608,9 @@ MonoBehaviour:
       - enemyPrefab: {fileID: 1799844621689748, guid: 1b3dff1b2abf14b4db35e333d4412cf4,
           type: 3}
         spawnChance: 1
+      - enemyPrefab: {fileID: 2668794392184123223, guid: 4f94ea7634688044fb543025351155d1,
+          type: 3}
+        spawnChance: 1
     reward:
       weapon: {fileID: 11400000, guid: 52784a13bbd1a9c4f8925b493f69839f, type: 2}
       healthBonus: 20
@@ -629,6 +632,9 @@ MonoBehaviour:
       - enemyPrefab: {fileID: 1699672455739750, guid: a8f207605defa904990fa85e72f65410,
           type: 3}
         spawnChance: 0.6
+      - enemyPrefab: {fileID: 6299968502319075396, guid: 11c94f107d77304498b517c6ffb12229,
+          type: 3}
+        spawnChance: 0.4
     reward:
       weapon: {fileID: 11400000, guid: 73a329b37e2fbeb46ad6a9d9d78ccbcc, type: 2}
       healthBonus: 20
@@ -637,7 +643,19 @@ MonoBehaviour:
   - unlockScore: 2000
     wave:
       spawnRate: 1
-      enemies: []
+      enemies:
+      - enemyPrefab: {fileID: 1699672455739750, guid: 115db2276a5ab1c449b31b7c50c9c591,
+          type: 3}
+        spawnChance: 1
+      - enemyPrefab: {fileID: 1799844621689748, guid: 1b3dff1b2abf14b4db35e333d4412cf4,
+          type: 3}
+        spawnChance: 1
+      - enemyPrefab: {fileID: 6299968502319075396, guid: 11c94f107d77304498b517c6ffb12229,
+          type: 3}
+        spawnChance: 1
+      - enemyPrefab: {fileID: 2668794392184123223, guid: 4f94ea7634688044fb543025351155d1,
+          type: 3}
+        spawnChance: 1
     reward:
       weapon: {fileID: 11400000, guid: 73a329b37e2fbeb46ad6a9d9d78ccbcc, type: 2}
       healthBonus: 100
