@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
-  deathEffect: {fileID: 1249314374038304, guid: 0dac50e8501a8cf40bcdb7d19a86a973,
+  deathEffect: {fileID: 6192724089161036641, guid: e17d9a3f04750764c8c0a7a0461e4c3b,
     type: 3}
   damage: 10
   reward: 1
