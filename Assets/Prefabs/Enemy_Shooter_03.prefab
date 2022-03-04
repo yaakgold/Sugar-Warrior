@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef33ebbcaa3052b4ebbb1f92ccbc50fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 100
+  moveSpeed: 75
   turnSpeed: 1
   repelRange: 2
   repelAmount: 0.3

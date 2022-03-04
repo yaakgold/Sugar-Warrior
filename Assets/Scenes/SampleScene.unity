@@ -538,13 +538,13 @@ MonoBehaviour:
       healthBonus: 10
     endTheGame: 0
     isUnlocked: 0
-  - unlockScore: 60
+  - unlockScore: 75
     wave:
       spawnRate: 1.5
       enemies:
       - enemyPrefab: {fileID: 1439578935461678, guid: d28dbd43105d9224d97be2e238817fff,
           type: 3}
-        spawnChance: 1
+        spawnChance: 0.6
       - enemyPrefab: {fileID: 1699672455739750, guid: 115db2276a5ab1c449b31b7c50c9c591,
           type: 3}
         spawnChance: 0.5
@@ -556,7 +556,7 @@ MonoBehaviour:
       healthBonus: 10
     endTheGame: 0
     isUnlocked: 0
-  - unlockScore: 160
+  - unlockScore: 150
     wave:
       spawnRate: 1.9
       enemies:
@@ -577,7 +577,7 @@ MonoBehaviour:
       healthBonus: 20
     endTheGame: 0
     isUnlocked: 0
-  - unlockScore: 350
+  - unlockScore: 300
     wave:
       spawnRate: 2.2
       enemies:
@@ -601,7 +601,7 @@ MonoBehaviour:
       healthBonus: 20
     endTheGame: 0
     isUnlocked: 0
-  - unlockScore: 550
+  - unlockScore: 500
     wave:
       spawnRate: 5.7
       enemies:
@@ -616,7 +616,7 @@ MonoBehaviour:
       healthBonus: 20
     endTheGame: 0
     isUnlocked: 0
-  - unlockScore: 800
+  - unlockScore: 750
     wave:
       spawnRate: 12
       enemies:
@@ -640,7 +640,7 @@ MonoBehaviour:
       healthBonus: 20
     endTheGame: 0
     isUnlocked: 0
-  - unlockScore: 2000
+  - unlockScore: 1000
     wave:
       spawnRate: 1
       enemies:

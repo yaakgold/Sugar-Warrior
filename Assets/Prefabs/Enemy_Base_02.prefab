@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef33ebbcaa3052b4ebbb1f92ccbc50fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 4
   turnSpeed: 0.3
   repelRange: 2
   repelAmount: 0.3
@@ -192,7 +192,7 @@ MonoBehaviour:
   deathEffect: {fileID: 6192724089161036641, guid: e17d9a3f04750764c8c0a7a0461e4c3b,
     type: 3}
   damage: 30
-  reward: 2
+  reward: 3
 --- !u!60 &1467210861208767077
 PolygonCollider2D:
   m_ObjectHideFlags: 0
