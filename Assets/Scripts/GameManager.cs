@@ -17,12 +17,18 @@ public class GameManager : MonoBehaviour {
 	private void Awake()
 	{
 		if (Instance == null)
+        {
 			Instance = this;
+			SceneManager.activeSceneChanged += SceneManager_activeSceneChanged;
+        }
+		else
+        {
+			Destroy(gameObject);
+        }
 
 		Time.timeScale = 1f;
 		Time.fixedDeltaTime = 0.02f * Time.timeScale;
 
-        SceneManager.activeSceneChanged += SceneManager_activeSceneChanged;
 
 		DontDestroyOnLoad(gameObject);
 	}
@@ -39,7 +45,7 @@ public class GameManager : MonoBehaviour {
 		if(pauseMenu) pauseMenu.SetActive(false);
 
 		deathScreen = GameObject.FindGameObjectWithTag("DeathScreen");
-		if(deathScreen) deathScreen.SetActive(false);
+		if (deathScreen) deathScreen.SetActive(false);
     }
 
 	public void TogglePause()
