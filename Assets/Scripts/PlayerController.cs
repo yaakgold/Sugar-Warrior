@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour {
 
@@ -25,18 +26,20 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
-		movement.x = Input.GetAxisRaw("Horizontal");
-		movement.y = Input.GetAxisRaw("Vertical");
+		//movement.x = Input.GetAxisRaw("Horizontal");
+		//movement.y = Input.GetAxisRaw("Vertical");
 
-		mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		//mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+		mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
 
 		transform.localScale = Vector3.one * Progression.Growth;
 		moveSpeed = startMoveSpeed * Progression.Growth;
 
-		if (Input.GetKeyDown(KeyCode.Escape))
-		{
-			GameManager.Instance.TogglePause();
-		}
+		//if (Input.GetKeyDown(KeyCode.Escape))
+		//{
+		//	GameManager.Instance.TogglePause();
+		//}
 	}
 
 	private void FixedUpdate()
@@ -55,6 +58,16 @@ public class PlayerController : MonoBehaviour {
 		rb.rotation = angle;
 
 		Position = rb.position;
+	}
+
+    public void OnMove(InputValue value)
+    {
+		movement = value.Get<Vector2>();
+    }
+
+	public void OnEscape(InputValue value)
+    {
+		GameManager.Instance.TogglePause();
 	}
 
 }

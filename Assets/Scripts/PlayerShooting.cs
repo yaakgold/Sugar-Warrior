@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerShooting : MonoBehaviour {
 
@@ -11,9 +12,11 @@ public class PlayerShooting : MonoBehaviour {
 
 	private float nextTimeOfFire = 0f;
 
+	private bool fireShot = false;
+
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButton("Fire1"))
+		if (fireShot)
 		{
 			if (Time.time >= nextTimeOfFire)
 			{
@@ -25,6 +28,7 @@ public class PlayerShooting : MonoBehaviour {
 					currentWeapon.Shoot(firePoint);
 				}
 
+				fireShot = false;
 				nextTimeOfFire = Time.time + 1f / currentWeapon.fireRate;
 			}
 		}
@@ -56,4 +60,9 @@ public class PlayerShooting : MonoBehaviour {
 
 		lr.enabled = false;
 	}
+
+	public void OnFire(InputValue value)
+    {
+		fireShot = true;
+    }
 }
