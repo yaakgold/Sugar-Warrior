@@ -607,10 +607,10 @@ MonoBehaviour:
       enemies:
       - enemyPrefab: {fileID: 1799844621689748, guid: 1b3dff1b2abf14b4db35e333d4412cf4,
           type: 3}
-        spawnChance: 1
+        spawnChance: 0.4
       - enemyPrefab: {fileID: 2668794392184123223, guid: 4f94ea7634688044fb543025351155d1,
           type: 3}
-        spawnChance: 1
+        spawnChance: 0.2
     reward:
       weapon: {fileID: 11400000, guid: 52784a13bbd1a9c4f8925b493f69839f, type: 2}
       healthBonus: 20
@@ -625,16 +625,16 @@ MonoBehaviour:
         spawnChance: 0.4
       - enemyPrefab: {fileID: 1699672455739750, guid: c65641542e94a844abd4e4fa60a165f7,
           type: 3}
-        spawnChance: 1
+        spawnChance: 0.8
       - enemyPrefab: {fileID: 1699672455739750, guid: 9100372b520aac744b86f99493ca6b08,
           type: 3}
-        spawnChance: 0.8
+        spawnChance: 0.6
       - enemyPrefab: {fileID: 1699672455739750, guid: a8f207605defa904990fa85e72f65410,
           type: 3}
-        spawnChance: 0.6
+        spawnChance: 0.4
       - enemyPrefab: {fileID: 6299968502319075396, guid: 11c94f107d77304498b517c6ffb12229,
           type: 3}
-        spawnChance: 0.4
+        spawnChance: 0.2
     reward:
       weapon: {fileID: 11400000, guid: 73a329b37e2fbeb46ad6a9d9d78ccbcc, type: 2}
       healthBonus: 20
